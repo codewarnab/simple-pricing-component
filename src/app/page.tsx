@@ -46,7 +46,7 @@ export default function Component() {
       <svg
         className="absolute inset-0 w-full h-[449px]"
         xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
+        preserveAspectRatio="xMaxYMin slice"
       >
         <path
           fill="#F1F5FE"

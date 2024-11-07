@@ -54,21 +54,21 @@ export default function Component() {
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg w-full max-w-[375px] md:max-w-xl p-6 md:p-10">
-          <div className="space-y-8 md:space-y-10">
+        <div className="bg-white rounded-lg shadow-lg w-full max-w-[375px] md:max-w-xl lg:p-6 p-4 md:p-10">
+          <div className="lg:space-y-8  md:space-y-10 space-y-2">
             {/* Pageviews and Price */}
-            <div className="flex flex-col items-center gap-8 text-center">
-              <div className="uppercase text-[hsl(225,20%,60%)] tracking-[0.15em] text-[12px] md:text-[14px] font-extrabold">
+            <div className="flex flex-col md:flex-row md:justify-between items-center gap-8 text-center md:text-left w-full">
+              <div className="uppercase text-[hsl(225,20%,60%)] tracking-[0.15em] text-[12px] md:text-[14px] font-extrabold order-1 md:order-none">
                 {pageviews < 1000 ? `${pageviews}K` : `${pageviews / 1000}M`} Pageviews
               </div>
-              <div className="flex items-center gap-2 md:order-2">
+              <div className=" items-center gap-2 order-2 md:order-none hidden md:flex">
                 <span className="text-[32px] md:text-4xl font-extrabold text-[hsl(227,35%,25%)]">${finalPrice.toFixed(2)}</span>
                 <span className="text-[hsl(225,20%,60%)] text-[14px] md:text-[15px]">/ month</span>
               </div>
             </div>
 
             {/* Slider */}
-            <div className="pt-6 pb-8 md:py-4">
+            <div className="pt-6 lg:pb-8 pb-5 md:py-4">
               <Slider
                 value={[pageviews]}
                 min={10}
@@ -77,7 +77,10 @@ export default function Component() {
                 onValueChange={(value) => setPageviews(value[0])}
               />
             </div>
-
+            <div className="md:hidden  flex items-center justify-center md:justify-end gap-2 pb-3">
+              <span className="text-[32px] md:text-4xl font-extrabold text-[hsl(227,35%,25%)]">${finalPrice.toFixed(2)}</span>
+              <span className="text-[hsl(225,20%,60%)] text-[14px] md:text-[15px]">/ month</span>
+            </div>
             {/* Billing Toggle */}
             <div className="flex items-center justify-center gap-3 text-[12px] md:pl-0 pl-3 md:text-sm text-[hsl(225,20%,60%)]">
               <span>Monthly Billing</span>

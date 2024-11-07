@@ -20,7 +20,7 @@ export default function Component() {
   const finalPrice = isYearly ? basePrice * 0.75 : basePrice
 
   return (
-    <div className="min-h-screen w-full bg-[hsl(230,100%,99%)] font-['Manrope'] text-[15px] relative overflow-hidden">
+    <div className="min-h-svh w-full bg-[hsl(230,100%,99%)] font-['Manrope'] text-[15px] relative overflow-hidden">
       {/* Main background SVG */}
       <svg
         className="absolute inset-0 w-full h-[449px]"
@@ -33,7 +33,7 @@ export default function Component() {
           d="M0 0h1440v449H191.5C85.737 449 0 363.263 0 257.5V0z"
         />
       </svg>
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen md:p-4 px-4 pb-4 pt-1 ">
         <div className="text-center mb-8 md:mb-12 relative max-w-[450px] mx-auto px-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"

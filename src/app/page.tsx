@@ -1,3 +1,14 @@
+// Potential improvements:
+// - Use Server Components for non-interactive parts of the UI to improve performance and reduce client-side JavaScript.
+// - Move interactive parts (like sliders and switches) into separate Client Components.
+// - Move the font configuration to the layout.tsx file for better performance and to follow Next.js best practices.
+// - Use a theme provider (like next-themes) to wrap the app for more robust dark mode implementation.
+// - Use Next.js Image component for optimized image loading, especially for the background SVGs.
+// - Implement proper internationalization (i18n) if the app needs to support multiple languages
+
+// as  this is a single component app focusing on the output rather than Next.js best practices. 
+// For a more comprehensive example of a well-structured Next.js app, you can refer to https://www.codewarnab.in/projects
+
 "use client"
 
 import * as React from "react"
